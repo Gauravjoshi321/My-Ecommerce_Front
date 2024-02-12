@@ -5,13 +5,15 @@ import {
   selectCount,
 } from './counterSlice';
 
-export function Counter() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
+
+export default function Counter() {
+  // const count = useSelector(selectCount);
+  // const dispatch = useDispatch();
+
 
   return (
     <div>
-      counter
+      ProductList
     </div>
   );
 }
