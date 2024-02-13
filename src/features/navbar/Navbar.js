@@ -26,7 +26,7 @@ function classNames(...classes) {
 }
 
 
-function Navbar() {
+function NavBar() {
   return (
     <div className="min-h-full">
       <Disclosure as="nav" className="bg-gray-800">
@@ -189,4 +189,7 @@ function Navbar() {
         <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
       </main>
     </div>
+  )
 }
+
+export default NavBar;
