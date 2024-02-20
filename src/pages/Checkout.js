@@ -25,14 +25,33 @@ const products = [
   },
 ]
 
+const addresses = [
+  {
+    name: "Gaurav Joshi",
+    street: "Pradhan enclave",
+    city: "North-Delhi",
+    pincode: 110084,
+    state: "Delhi",
+    phone: 1234567890,
+  },
+  {
+    name: "Sanjay Joshi",
+    street: "Pokhar Khali",
+    city: "Almora",
+    pincode: 263601,
+    state: "Uttarakhand",
+    phone: 9876543210,
+  },
+]
+
 function Checkout() {
   const [open, setOpen] = useState(true)
 
   return (
-    <form>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
-          <div className="lg:col-span-3">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
+        <div className="lg:col-span-3">
+          <form className="bg-white px-6">
             <div className="border-b border-gray-900/10 pb-12">
               <h2 className="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
               <p className="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
@@ -164,102 +183,59 @@ function Checkout() {
             </div>
 
             <div className="border-b border-gray-900/10 pb-12">
-              <h2 className="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
+              <h2 className="text-base font-semibold leading-7 text-gray-900">Address</h2>
               <p className="mt-1 text-sm leading-6 text-gray-600">
-                We'll always let you know about important changes, but you pick what else you want to hear about.
+                Choose from existing addresses
               </p>
+
+              <ul role="list" className="divide-y divide-gray-100">
+                {addresses.map((address) => (
+                  <li key={address.email} className="flex justify-between gap-x-6 py-5">
+                    <div className="flex min-w-0 gap-x-4">
+                      <div className="min-w-0 flex-auto">
+                        <p className="text-sm font-semibold leading-6 text-gray-900">{address.name}</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">{address.phone}</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">{address.street}</p>
+                      </div>
+                    </div>
+                    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p className="text-sm leading-6 text-gray-900">{address.state}</p>
+                      <p className="text-sm leading-6 text-gray-900">{address.pincode}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
 
               <div className="mt-10 space-y-10">
                 <fieldset>
-                  <legend className="text-sm font-semibold leading-6 text-gray-900">By Email</legend>
+                  <legend className="text-sm font-semibold leading-6 text-gray-900">Payment methods</legend>
+                  <p className="mt-1 text-sm leading-6 text-gray-600">Choose one</p>
                   <div className="mt-6 space-y-6">
-                    <div className="relative flex gap-x-3">
-                      <div className="flex h-6 items-center">
-                        <input
-                          id="comments"
-                          name="comments"
-                          type="checkbox"
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
-                      </div>
-                      <div className="text-sm leading-6">
-                        <label htmlFor="comments" className="font-medium text-gray-900">
-                          Comments
-                        </label>
-                        <p className="text-gray-500">Get notified when someones posts a comment on a posting.</p>
-                      </div>
-                    </div>
-                    <div className="relative flex gap-x-3">
-                      <div className="flex h-6 items-center">
-                        <input
-                          id="candidates"
-                          name="candidates"
-                          type="checkbox"
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
-                      </div>
-                      <div className="text-sm leading-6">
-                        <label htmlFor="candidates" className="font-medium text-gray-900">
-                          Candidates
-                        </label>
-                        <p className="text-gray-500">Get notified when a candidate applies for a job.</p>
-                      </div>
-                    </div>
-                    <div className="relative flex gap-x-3">
-                      <div className="flex h-6 items-center">
-                        <input
-                          id="offers"
-                          name="offers"
-                          type="checkbox"
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
-                      </div>
-                      <div className="text-sm leading-6">
-                        <label htmlFor="offers" className="font-medium text-gray-900">
-                          Offers
-                        </label>
-                        <p className="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend className="text-sm font-semibold leading-6 text-gray-900">Push Notifications</legend>
-                  <p className="mt-1 text-sm leading-6 text-gray-600">These are delivered via SMS to your mobile phone.</p>
-                  <div className="mt-6 space-y-6">
+
                     <div className="flex items-center gap-x-3">
                       <input
-                        id="push-everything"
-                        name="push-notifications"
+                        id="cash"
+                        name="payments"
                         type="radio"
                         className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
-                      <label htmlFor="push-everything" className="block text-sm font-medium leading-6 text-gray-900">
-                        Everything
+                      <label htmlFor="Cash" className="block text-sm font-medium leading-6 text-gray-900">
+                        Cash
                       </label>
                     </div>
+
                     <div className="flex items-center gap-x-3">
                       <input
-                        id="push-email"
-                        name="push-notifications"
+                        id="cash"
+                        name="payments"
                         type="radio"
                         className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
-                      <label htmlFor="push-email" className="block text-sm font-medium leading-6 text-gray-900">
-                        Same as email
+                      <label htmlFor="Card" className="block text-sm font-medium leading-6 text-gray-900">
+                        Card
                       </label>
                     </div>
-                    <div className="flex items-center gap-x-3">
-                      <input
-                        id="push-nothing"
-                        name="push-notifications"
-                        type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                      <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
-                        No push notifications
-                      </label>
-                    </div>
+
                   </div>
                 </fieldset>
               </div>
@@ -277,99 +253,100 @@ function Checkout() {
               </button>
 
             </div>
-          </div>
+          </form >
+        </div>
 
-          <div className="lg:col-span-2">
-            <div className="mx-auto max-w-6xl mt-12 px-4 sm:px-6 lg:px-8 bg-white">
 
-              <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                <h1 className="text-4xl font-semibold my-6 tracking-tight text-gray-900">Cart</h1>
-                <div className="flow-root">
-                  <ul role="list" className="-my-6 divide-y divide-gray-200">
-                    {products.map((product) => (
-                      <li key={product.id} className="flex py-6">
-                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                          <img
-                            src={product.imageSrc}
-                            alt={product.imageAlt}
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
+        <div className="lg:col-span-2">
+          <div className="mx-auto max-w-6xl mt-12 px-4 sm:px-6 lg:px-8 bg-white">
 
-                        <div className="ml-4 flex flex-1 flex-col">
-                          <div>
-                            <div className="flex justify-between text-base font-medium text-gray-900">
-                              <h3>
-                                <a href={product.href}>{product.name}</a>
-                              </h3>
-                              <p className="ml-4">{product.price}</p>
-                            </div>
-                            <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+            <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+              <h1 className="text-4xl font-semibold my-6 tracking-tight text-gray-900">Cart</h1>
+              <div className="flow-root">
+                <ul role="list" className="-my-6 divide-y divide-gray-200">
+                  {products.map((product) => (
+                    <li key={product.id} className="flex py-6">
+                      <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                        <img
+                          src={product.imageSrc}
+                          alt={product.imageAlt}
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+
+                      <div className="ml-4 flex flex-1 flex-col">
+                        <div>
+                          <div className="flex justify-between text-base font-medium text-gray-900">
+                            <h3>
+                              <a href={product.href}>{product.name}</a>
+                            </h3>
+                            <p className="ml-4">{product.price}</p>
                           </div>
-                          <div className="flex flex-1 items-end justify-between text-sm">
-                            <div className="text-gray-500">
-                              <label htmlFor="quantity" className="inline mr-2 text-sm font-medium leading-6 text-gray-900">
-                                Qty.
-                              </label>
+                          <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                        </div>
+                        <div className="flex flex-1 items-end justify-between text-sm">
+                          <div className="text-gray-500">
+                            <label htmlFor="quantity" className="inline mr-2 text-sm font-medium leading-6 text-gray-900">
+                              Qty.
+                            </label>
 
-                              <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                              </select>
-                            </div>
+                            <select>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                            </select>
+                          </div>
 
-                            <div className="flex">
-                              <button
-                                type="button"
-                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                              >
-                                Remove
-                              </button>
-                            </div>
+                          <div className="flex">
+                            <button
+                              type="button"
+                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                            >
+                              Remove
+                            </button>
                           </div>
                         </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            </div>
 
-              <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                <div className="flex justify-between text-base font-medium text-gray-900">
-                  <p>Subtotal</p>
-                  <p>$262.00</p>
-                </div>
-                <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
-                <div className="mt-6">
-                  <a
-                    href="#"
-                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                  >
-                    Checkout
-                  </a>
-                </div>
-                <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                  <p>
-                    or{' '}
-                    <Link to="/">
-                      <button
-                        type="button"
-                        className="font-medium text-indigo-600 hover:text-indigo-500"
-                        onClick={() => setOpen(false)}
-                      >
-                        Continue Shopping
-                        <span aria-hidden="true"> &rarr;</span>
-                      </button>
-                    </Link>
-                  </p>
-                </div>
+            <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+              <div className="flex justify-between text-base font-medium text-gray-900">
+                <p>Subtotal</p>
+                <p>$262.00</p>
+              </div>
+              <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+              <div className="mt-6">
+                <a
+                  href="#"
+                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                >
+                  Checkout
+                </a>
+              </div>
+              <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                <p>
+                  or{' '}
+                  <Link to="/">
+                    <button
+                      type="button"
+                      className="font-medium text-indigo-600 hover:text-indigo-500"
+                      onClick={() => setOpen(false)}
+                    >
+                      Continue Shopping
+                      <span aria-hidden="true"> &rarr;</span>
+                    </button>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </form>
+    </div >
   )
 }
 
