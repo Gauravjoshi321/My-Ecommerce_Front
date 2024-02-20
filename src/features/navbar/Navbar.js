@@ -64,19 +64,19 @@ function NavBar({ children }) {
                   </div>
                 </div>
                 <div className="hidden md:block">
-                  <div className="ml-4 flex items-center md:ml-6">
+                  <div className="ml-4 flex items-center gap-3 md:ml-6">
                     <Link to="/cart">
                       <button
                         type="button"
                         className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <span className="absolute -inset-1.5" />
-                        <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                        <ShoppingCartIcon className="h-7 w-7" aria-hidden="true" />
+                        <span className="absolute -top-2 left-9  inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                          3
+                        </span>
                       </button>
                     </Link>
-                    <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                      3
-                    </span>
 
                     {/* Profile dropdown */}
                     <Menu as="div" className="relative ml-3">
@@ -169,10 +169,10 @@ function NavBar({ children }) {
                       <span className="absolute -inset-1.5" />
                       <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
+                    <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                      3
+                    </span>
                   </Link>
-                  <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                    3
-                  </span>
                 </div>
                 <div className="mt-3 space-y-1 px-2">
                   {userNavigation.map((item) => (
@@ -200,7 +200,7 @@ function NavBar({ children }) {
       <main>
         <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</div>
       </main>
-    </div>
+    </div >
   )
 }
 
