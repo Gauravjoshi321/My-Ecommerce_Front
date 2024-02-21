@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchCount } from './ProductAPI';
+import { fetchAllProducts } from './ProductAPI';
 
 const initialState = {
-  value: 0,
+  products: [],
   status: 'idle',
 };
 
-export const incrementAsync = createAsyncThunk(
-  'counter/fetchCount',
-  async (amount) => {
-    const response = await fetchCount(amount);
+export const fetchAllProductsAsync = createAsyncThunk(
+  'product/fetchAllProducts',
+  async () => {
+    const response = await fetchAllProducts();
     return response.data;
   }
 );
@@ -25,12 +25,12 @@ export const productSlice = createSlice({
 
     extraReducers: (builder) => {
       builder
-        .addCase(incrementAsync.pending, (state) => {
+        .addCase(fetchAllProductsAsync.pending, (state) => {
           state.status = 'loading';
         })
-        .addCase(incrementAsync.fulfilled, (state, action) => {
+        .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
           state.status = 'idle';
-          state.value += action.payload;
+          state.products = action.payload;
         });
     },
   }
@@ -38,6 +38,6 @@ export const productSlice = createSlice({
 
 export const { increment } = productSlice.actions;
 
-// export const selectCount = (state) => state.counter.value;
+export const selectAllProducts = (state) => state.product.products;
 
 export default productSlice.reducer;
