@@ -51,7 +51,6 @@ export default function ProductList() {
   const products = useSelector(selectAllProducts);
   const dispatch = useDispatch();
 
-  console.log(products);
 
   useEffect(() => {
     dispatch(fetchAllProductsAsync());
