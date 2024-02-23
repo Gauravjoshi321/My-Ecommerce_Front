@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAllProductsAsync, selectAllProducts } from '../ProductSlice';
+import { fetchAllProductsAsync, fetchProductsByFiltersAsync, selectAllProducts } from '../ProductSlice';
 
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
@@ -8,11 +8,9 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, ChevronLeftIcon, Chev
 import { Link } from 'react-router-dom';
 
 const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
-  { name: 'Price: Low to High', href: '#', current: false },
-  { name: 'Price: High to Low', href: '#', current: false },
+  { name: 'Best Rating', sort: 'rating', order: 'desc', current: false },
+  { name: 'Price: Low to High', sort: 'price', order: 'asc', current: false },
+  { name: 'Price: High to Low', sort: 'price', order: 'desc', current: false },
 ]
 
 const filters = [
@@ -131,14 +129,27 @@ function classNames(...classes) {
 
 
 export default function ProductList() {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const products = useSelector(selectAllProducts);
   const dispatch = useDispatch();
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const products = useSelector(selectAllProducts);
+  const [filter, setFilter] = useState({});
 
+  const handleFilter = (e, section, option) => {
+    const newFilter = { ...filter, [section.id]: option.value };
+    setFilter(newFilter);
+
+    dispatch(fetchProductsByFiltersAsync(newFilter));
+  };
+
+  const handleSort = (e, option) => {
+    const newFilter = { ...filter, _sort: option.sort, };
+    setFilter(newFilter);
+    dispatch(fetchProductsByFiltersAsync(newFilter));
+  };
 
   useEffect(() => {
     dispatch(fetchAllProductsAsync());
-  }, [dispatch])
+  }, [dispatch]);
 
 
   return (
@@ -265,16 +276,18 @@ export default function ProductList() {
                       {sortOptions.map((option) => (
                         <Menu.Item key={option.name}>
                           {({ active }) => (
-                            <a
-                              href={option.href}
+                            <p
+                              onClick={e => handleSort(e, option)}
                               className={classNames(
-                                option.current ? 'font-medium text-gray-900' : 'text-gray-500',
+                                option.current
+                                  ? 'font-medium text-gray-900'
+                                  : 'text-gray-500',
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm'
                               )}
                             >
                               {option.name}
-                            </a>
+                            </p>
                           )}
                         </Menu.Item>
                       ))}
@@ -335,7 +348,9 @@ export default function ProductList() {
                                   type="checkbox"
                                   defaultChecked={option.checked}
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                />
+                                  onChange={(e) =>
+                                    handleFilter(e, section, option)
+                                  } />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
                                   className="ml-3 text-sm text-gray-600"
@@ -359,29 +374,44 @@ export default function ProductList() {
 
                     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                       {products.map((product) => (
-                        <Link to="/productdetails">
-                          <div key={product.id} className="group relative p-2 border-2 border-solid">
+                        <Link to="/product-detail" key={product.id}>
+                          <div className="group relative border-solid border-2 p-2 border-gray-200">
                             <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
                               <img
                                 src={product.thumbnail}
-                                alt={product.imageAlt}
+                                alt={product.title}
                                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                               />
                             </div>
                             <div className="mt-4 flex justify-between">
                               <div>
                                 <h3 className="text-sm text-gray-700">
-                                  <p>{product.title}</p>
-                                  <div className='flex items-end gap-1 mt-1 text-gray-500'>
-                                    <span><StarIcon className='w-5 h-5 inline' /></span>
-                                    <p>{product.rating}</p>
-                                  </div>
+                                  <a href={product.thumbnail}>
+                                    <span
+                                      aria-hidden="true"
+                                      className="absolute inset-0"
+                                    />
+                                    {product.title}
+                                  </a>
                                 </h3>
-                                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                                <p className="mt-1 text-sm text-gray-500">
+                                  <StarIcon className="w-6 h-6 inline"></StarIcon>
+                                  <span className=" align-bottom">
+                                    {product.rating}
+                                  </span>
+                                </p>
                               </div>
-                              <div className="text-sm font-medium text-gray-900">
-                                <p className='text-gray-900'>${Math.round(product.price - ((product.price / 100) * product.discountPercentage))}</p>
-                                <p className='text-gray-500 line-through mt-1.5'>${product.price}</p>
+                              <div>
+                                <p className="text-sm block font-medium text-gray-900">
+                                  $
+                                  {Math.round(
+                                    product.price *
+                                    (1 - product.discountPercentage / 100)
+                                  )}
+                                </p>
+                                <p className="text-sm block line-through font-medium text-gray-400">
+                                  ${product.price}
+                                </p>
                               </div>
                             </div>
                           </div>
