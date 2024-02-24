@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAllProductsAsync, fetchProductsByFiltersAsync, selectAllProducts } from '../ProductSlice';
+import { fetchProductsByFiltersAsync, selectAllProducts } from '../ProductSlice';
 
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
@@ -133,23 +133,33 @@ export default function ProductList() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const products = useSelector(selectAllProducts);
   const [filter, setFilter] = useState({});
+  const [sort, setSort] = useState({});
 
   const handleFilter = (e, section, option) => {
-    const newFilter = { ...filter, [section.id]: option.value };
-    setFilter(newFilter);
+    const newFilter = { ...filter };
+    // TODO : on server it will support multiple categories
+    if (e.target.checked) {
+      if (newFilter[section.id]) {
+        newFilter[section.id].push(option.value)
+      } else {
+        newFilter[section.id] = [option.value]
+      }
+    } else {
+      const index = newFilter[section.id].findIndex(el => el === option.value)
+      newFilter[section.id].splice(index, 1);
+    }
 
-    dispatch(fetchProductsByFiltersAsync(newFilter));
+    setFilter(newFilter);
   };
 
   const handleSort = (e, option) => {
-    const newFilter = { ...filter, _sort: option.sort, };
-    setFilter(newFilter);
-    dispatch(fetchProductsByFiltersAsync(newFilter));
+    const sort = { _sort: option.sort };
+    setSort(sort);
   };
 
   useEffect(() => {
-    dispatch(fetchAllProductsAsync());
-  }, [dispatch]);
+    dispatch(fetchProductsByFiltersAsync({ filter, sort }));
+  }, [dispatch, filter, sort]);
 
 
   return (
