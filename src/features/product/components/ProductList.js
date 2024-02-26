@@ -153,7 +153,7 @@ export default function ProductList() {
   };
 
   const handleSort = (e, option) => {
-    const sort = { _sort: option.sort };
+    const sort = { _sort: option.sort, _order: option.order };
     setSort(sort);
   };
 
