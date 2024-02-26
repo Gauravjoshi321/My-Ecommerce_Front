@@ -36,7 +36,6 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     queryString += `${key}=${pagination[key]}&`
   }
 
-  console.log(queryString);
 
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
@@ -46,6 +45,24 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     const totalItems = await response.headers.get('X-Total-Count')
 
     resolve({ data: { products: data, totalItems: +totalItems } })
+  }
+  );
+}
+
+export function fetchCategories() {
+  return new Promise(async (resolve) => {
+    const response = await fetch('http://localhost:8080/categories')
+    const data = await response.json()
+    resolve({ data })
+  }
+  );
+}
+
+export function fetchBrands() {
+  return new Promise(async (resolve) => {
+    const response = await fetch('http://localhost:8080/brands')
+    const data = await response.json()
+    resolve({ data })
   }
   );
 }
