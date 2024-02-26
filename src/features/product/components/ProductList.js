@@ -1,11 +1,14 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchProductsByFiltersAsync, selectAllProducts } from '../ProductSlice';
-
 import { Fragment, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, ChevronLeftIcon, ChevronRightIcon, Squares2X2Icon, StarIcon } from '@heroicons/react/20/solid'
-import { Link } from 'react-router-dom';
+
+import { fetchProductsByFiltersAsync, selectAllProducts, selectTotalItems } from '../ProductSlice';
+import { ITEMS_PER_PAGE } from '../../../app/constants';
+
 
 const sortOptions = [
   { name: 'Best Rating', sort: 'rating', order: 'desc', current: false },
