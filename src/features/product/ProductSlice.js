@@ -55,7 +55,10 @@ export const productSlice = createSlice({
 
 export const { increment } = productSlice.actions;
 
-export const selectAllProducts = (state) => state.product.products;
+export const selectAllProducts = (state) => {
+  console.log(state.product.products.data);
+  return state.product.products.data;
+};
 export const selectTotalItems = (state) => state.product.totalItems;
 
 export default productSlice.reducer;
