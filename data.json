@@ -2333,5 +2333,12 @@
       "label": "lighting",
       "checked": false
     }
+  ],
+  "users": [
+    {
+      "id": "85aa",
+      "email": "admin@natours.io",
+      "password": "Ym5aVeLj?LycsWH"
+    }
   ]
 }
