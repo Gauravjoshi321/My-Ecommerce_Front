@@ -1,10 +1,3 @@
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  increment,
-  incrementAsync,
-  selectCount,
-} from './cartSlice';
-
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -33,8 +26,6 @@ const products = [
 ]
 
 function Cart() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
   const [open, setOpen] = useState(true)
 
   return (
@@ -102,7 +93,7 @@ function Cart() {
           <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
           <div className="mt-6">
             <Link
-              href="/checkout"
+              to="/checkout"
               className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
             >
               Checkout
