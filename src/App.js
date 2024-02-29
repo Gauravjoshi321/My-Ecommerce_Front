@@ -1,25 +1,22 @@
-import Home from './pages/Home';
+import { useEffect } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from 'react-router-dom';
-import Cart from './features/cart/Cart';
+
+import Protected from './features/auth/components/Protected';
+import Home from './pages/Home';
 import CartPage from './pages/CartPage';
 import Checkout from './pages/Checkout';
 import ProductDetailPage from './pages/ProductDetailPage';
-import Protected from './features/auth/components/Protected';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { selectLoggedInUser } from './features/auth/authSlice';
 import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import PageNotFound from './pages/404';
 import OrderSuccessPage from './pages/OrderSuccessPage';
-import UserOrders from './features/user/components/UserOrders';
 import UserOrdersPage from './pages/UserOrdersPage';
+import UserProfilePage from './pages/UserProfilePage';
+import { fetchLoggedInUserAsync } from './features/user/userSlice';
 
 const router = createBrowserRouter([
   {
@@ -72,13 +69,18 @@ const router = createBrowserRouter([
     path: '/orders',
     element: (
       <UserOrdersPage></UserOrdersPage>
-      // we will add Page later right now using component directly.
     ),
   },
   {
     path: '*',
     element: (
       <PageNotFound></PageNotFound>
+    ),
+  },
+  {
+    path: '/profile',
+    element: (
+      <UserProfilePage></UserProfilePage>
     ),
   },
 ]);
@@ -90,6 +92,7 @@ function App() {
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync(user.id))
+      dispatch(fetchLoggedInUserAsync(user.id))
     }
   }, [dispatch, user])
 
