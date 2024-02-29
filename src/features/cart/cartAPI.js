@@ -35,8 +35,9 @@ export function updateCart(update) {
 
 
 export function deleteItemFromCart(itemId) {
+  console.log(itemId)
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/cart?id=' + itemId, {
+    const response = await fetch('http://localhost:8080/cart/' + itemId, {
       method: 'DELETE',
       headers: { 'content-type': 'application/json' },
     });
