@@ -357,6 +357,14 @@ function Product({ product, setSelectedColor, selectedColor, setSelectedSize, se
               </div>
             </div>
           </div>
+
+          {product.deleted && (
+            <div>
+              <p className="text-sm text-red-400">product deleted</p>
+            </div>
+          )}
+          {/* will not be needed when backend is implemented */}
+
         </div>
       </div>)}
     </>
