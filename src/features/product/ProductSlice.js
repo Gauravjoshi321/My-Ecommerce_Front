@@ -104,7 +104,7 @@ export const productSlice = createSlice({
   },
 });
 
-export const { increment } = productSlice.actions;
+// export const { } = productSlice.actions;
 
 export const selectAllProducts = (state) => {
   return state.product.products.data;
