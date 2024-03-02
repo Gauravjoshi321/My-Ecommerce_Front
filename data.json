@@ -2437,6 +2437,7 @@
       "id": "85aa",
       "email": "admin@natours.io",
       "password": "Ym5aVeLj?LycsWH",
+      "role": "user",
       "addresses": [
         {
           "name": "SANJAY JOSHI",
