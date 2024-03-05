@@ -1,5 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { ITEMS_PER_PAGE } from "../../app/constants";
+import { ITEMS_PER_PAGE } from "../app/constants";
 
 export default function Pagination({ page, setPage, handlePage, totalItems }) {
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
@@ -54,8 +54,8 @@ export default function Pagination({ page, setPage, handlePage, totalItems }) {
                 onClick={(e) => handlePage(index + 1)}
                 aria-current="page"
                 className={`relative cursor-pointer z-10 inline-flex items-center ${index + 1 === page
-                    ? 'bg-indigo-600 text-white'
-                    : 'text-gray-400'
+                  ? 'bg-indigo-600 text-white'
+                  : 'text-gray-400'
                   } px-4 py-2 text-sm font-semibold  focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
               >
                 {index + 1}

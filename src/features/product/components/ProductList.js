@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, ChevronLeftIcon, ChevronRightIcon, Squares2X2Icon, StarIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon, StarIcon } from '@heroicons/react/20/solid'
 
 import {
   fetchProductsByFiltersAsync,
@@ -15,8 +15,8 @@ import {
   selectBrands,
   selectCategories,
 } from '../ProductSlice';
-import { ITEMS_PER_PAGE, discountedPrice } from '../../../app/constants';
-import Pagination from '../../common/Pagination';
+import { discountedPrice } from '../../../app/constants';
+import Pagination from '../../../common/Pagination';
 
 
 function classNames(...classes) {
