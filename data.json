@@ -1880,494 +1880,592 @@
     {
       "value": "Apple",
       "label": "Apple",
-      "checked": false
+      "checked": false,
+      "id": "230c"
     },
     {
       "value": "Samsung",
       "label": "Samsung",
-      "checked": false
+      "checked": false,
+      "id": "836c"
     },
     {
       "value": "OPPO",
       "label": "OPPO",
-      "checked": false
+      "checked": false,
+      "id": "d72b"
     },
     {
       "value": "Huawei",
       "label": "Huawei",
-      "checked": false
+      "checked": false,
+      "id": "d61d"
     },
     {
       "value": "Microsoft Surface",
       "label": "Microsoft Surface",
-      "checked": false
+      "checked": false,
+      "id": "b27e"
     },
     {
       "value": "Infinix",
       "label": "Infinix",
-      "checked": false
+      "checked": false,
+      "id": "a025"
     },
     {
       "value": "HP Pavilion",
       "label": "HP Pavilion",
-      "checked": false
+      "checked": false,
+      "id": "16ca"
     },
     {
       "value": "Impression of Acqua Di Gio",
       "label": "Impression of Acqua Di Gio",
-      "checked": false
+      "checked": false,
+      "id": "c6d8"
     },
     {
       "value": "Royal_Mirage",
       "label": "Royal_Mirage",
-      "checked": false
+      "checked": false,
+      "id": "c853"
     },
     {
       "value": "Fog Scent Xpressio",
       "label": "Fog Scent Xpressio",
-      "checked": false
+      "checked": false,
+      "id": "c587"
     },
     {
       "value": "Al Munakh",
       "label": "Al Munakh",
-      "checked": false
+      "checked": false,
+      "id": "166a"
     },
     {
       "value": "Lord - Al-Rehab",
       "label": "Lord   Al Rehab",
-      "checked": false
+      "checked": false,
+      "id": "05d3"
     },
     {
       "value": "L'Oreal Paris",
       "label": "L'Oreal Paris",
-      "checked": false
+      "checked": false,
+      "id": "f5c8"
     },
     {
       "value": "Hemani Tea",
       "label": "Hemani Tea",
-      "checked": false
+      "checked": false,
+      "id": "7a29"
     },
     {
       "value": "Dermive",
       "label": "Dermive",
-      "checked": false
+      "checked": false,
+      "id": "1434"
     },
     {
       "value": "ROREC White Rice",
       "label": "ROREC White Rice",
-      "checked": false
+      "checked": false,
+      "id": "4460"
     },
     {
       "value": "Fair & Clear",
       "label": "Fair & Clear",
-      "checked": false
+      "checked": false,
+      "id": "4486"
     },
     {
       "value": "Saaf & Khaas",
       "label": "Saaf & Khaas",
-      "checked": false
+      "checked": false,
+      "id": "aad9"
     },
     {
       "value": "Bake Parlor Big",
       "label": "Bake Parlor Big",
-      "checked": false
+      "checked": false,
+      "id": "02ea"
     },
     {
       "value": "Baking Food Items",
       "label": "Baking Food Items",
-      "checked": false
+      "checked": false,
+      "id": "4f0b"
     },
     {
       "value": "fauji",
       "label": "fauji",
-      "checked": false
+      "checked": false,
+      "id": "c51d"
     },
     {
       "value": "Dry Rose",
       "label": "Dry Rose",
-      "checked": false
+      "checked": false,
+      "id": "502e"
     },
     {
       "value": "Boho Decor",
       "label": "Boho Decor",
-      "checked": false
+      "checked": false,
+      "id": "4c5c"
     },
     {
       "value": "Flying Wooden",
       "label": "Flying Wooden",
-      "checked": false
+      "checked": false,
+      "id": "fdf3"
     },
     {
       "value": "LED Lights",
       "label": "LED Lights",
-      "checked": false
+      "checked": false,
+      "id": "d69f"
     },
     {
       "value": "luxury palace",
       "label": "luxury palace",
-      "checked": false
+      "checked": false,
+      "id": "0b00"
     },
     {
       "value": "Golden",
       "label": "Golden",
-      "checked": false
+      "checked": false,
+      "id": "d59f"
     },
     {
       "value": "Furniture Bed Set",
       "label": "Furniture Bed Set",
-      "checked": false
+      "checked": false,
+      "id": "c0bf"
     },
     {
       "value": "Ratttan Outdoor",
       "label": "Ratttan Outdoor",
-      "checked": false
+      "checked": false,
+      "id": "806d"
     },
     {
       "value": "Kitchen Shelf",
       "label": "Kitchen Shelf",
-      "checked": false
+      "checked": false,
+      "id": "363c"
     },
     {
       "value": "Multi Purpose",
       "label": "Multi Purpose",
-      "checked": false
+      "checked": false,
+      "id": "9c88"
     },
     {
       "value": "AmnaMart",
       "label": "AmnaMart",
-      "checked": false
+      "checked": false,
+      "id": "bbfb"
     },
     {
       "value": "Professional Wear",
       "label": "Professional Wear",
-      "checked": false
+      "checked": false,
+      "id": "4c03"
     },
     {
       "value": "Soft Cotton",
       "label": "Soft Cotton",
-      "checked": false
+      "checked": false,
+      "id": "175a"
     },
     {
       "value": "Top Sweater",
       "label": "Top Sweater",
-      "checked": false
+      "checked": false,
+      "id": "2ca3"
     },
     {
       "value": "RED MICKY MOUSE..",
       "label": "RED MICKY MOUSE..",
-      "checked": false
+      "checked": false,
+      "id": "0aec"
     },
     {
       "value": "Digital Printed",
       "label": "Digital Printed",
-      "checked": false
+      "checked": false,
+      "id": "8cc9"
     },
     {
       "value": "Ghazi Fabric",
       "label": "Ghazi Fabric",
-      "checked": false
+      "checked": false,
+      "id": "65dc"
     },
     {
       "value": "IELGY",
       "label": "IELGY",
-      "checked": false
+      "checked": false,
+      "id": "f794"
     },
     {
       "value": "IELGY fashion",
       "label": "IELGY fashion",
-      "checked": false
+      "checked": false,
+      "id": "c2a4"
     },
     {
       "value": "Synthetic Leather",
       "label": "Synthetic Leather",
-      "checked": false
+      "checked": false,
+      "id": "3f40"
     },
     {
       "value": "Sandals Flip Flops",
       "label": "Sandals Flip Flops",
-      "checked": false
+      "checked": false,
+      "id": "334f"
     },
     {
       "value": "Maasai Sandals",
       "label": "Maasai Sandals",
-      "checked": false
+      "checked": false,
+      "id": "7a83"
     },
     {
       "value": "Arrivals Genuine",
       "label": "Arrivals Genuine",
-      "checked": false
+      "checked": false,
+      "id": "506c"
     },
     {
       "value": "Vintage Apparel",
       "label": "Vintage Apparel",
-      "checked": false
+      "checked": false,
+      "id": "b5d3"
     },
     {
       "value": "FREE FIRE",
       "label": "FREE FIRE",
-      "checked": false
+      "checked": false,
+      "id": "b631"
     },
     {
       "value": "The Warehouse",
       "label": "The Warehouse",
-      "checked": false
+      "checked": false,
+      "id": "5af9"
     },
     {
       "value": "Sneakers",
       "label": "Sneakers",
-      "checked": false
+      "checked": false,
+      "id": "5ead"
     },
     {
       "value": "Rubber",
       "label": "Rubber",
-      "checked": false
+      "checked": false,
+      "id": "92f0"
     },
     {
       "value": "Naviforce",
       "label": "Naviforce",
-      "checked": false
+      "checked": false,
+      "id": "0c6e"
     },
     {
       "value": "SKMEI 9117",
       "label": "SKMEI 9117",
-      "checked": false
+      "checked": false,
+      "id": "8b1d"
     },
     {
       "value": "Strap Skeleton",
       "label": "Strap Skeleton",
-      "checked": false
+      "checked": false,
+      "id": "fe41"
     },
     {
       "value": "Stainless",
       "label": "Stainless",
-      "checked": false
+      "checked": false,
+      "id": "5d05"
     },
     {
       "value": "Eastern Watches",
       "label": "Eastern Watches",
-      "checked": false
+      "checked": false,
+      "id": "9d29"
     },
     {
       "value": "Luxury Digital",
       "label": "Luxury Digital",
-      "checked": false
+      "checked": false,
+      "id": "fb08"
     },
     {
       "value": "Watch Pearls",
       "label": "Watch Pearls",
-      "checked": false
+      "checked": false,
+      "id": "343e"
     },
     {
       "value": "Bracelet",
       "label": "Bracelet",
-      "checked": false
+      "checked": false,
+      "id": "c4ff"
     },
     {
       "value": "LouisWill",
       "label": "LouisWill",
-      "checked": false
+      "checked": false,
+      "id": "89ce"
     },
     {
       "value": "Copenhagen Luxe",
       "label": "Copenhagen Luxe",
-      "checked": false
+      "checked": false,
+      "id": "ec6c"
     },
     {
       "value": "Steal Frame",
       "label": "Steal Frame",
-      "checked": false
+      "checked": false,
+      "id": "c9b8"
     },
     {
       "value": "Darojay",
       "label": "Darojay",
-      "checked": false
+      "checked": false,
+      "id": "779d"
     },
     {
       "value": "Fashion Jewellery",
       "label": "Fashion Jewellery",
-      "checked": false
+      "checked": false,
+      "id": "6d2a"
     },
     {
       "value": "Cuff Butterfly",
       "label": "Cuff Butterfly",
-      "checked": false
+      "checked": false,
+      "id": "d46e"
     },
     {
       "value": "Designer Sun Glasses",
       "label": "Designer Sun Glasses",
-      "checked": false
+      "checked": false,
+      "id": "25f6"
     },
     {
       "value": "mastar watch",
       "label": "mastar watch",
-      "checked": false
+      "checked": false,
+      "id": "51d7"
     },
     {
       "value": "Car Aux",
       "label": "Car Aux",
-      "checked": false
+      "checked": false,
+      "id": "31eb"
     },
     {
       "value": "W1209 DC12V",
       "label": "W1209 DC12V",
-      "checked": false
+      "checked": false,
+      "id": "56b7"
     },
     {
       "value": "TC Reusable",
       "label": "TC Reusable",
-      "checked": false
+      "checked": false,
+      "id": "e649"
     },
     {
       "value": "Neon LED Light",
       "label": "Neon LED Light",
-      "checked": false
+      "checked": false,
+      "id": "80dc"
     },
     {
       "value": "METRO 70cc Motorcycle - MR70",
       "label": "METRO 70cc Motorcycle   MR70",
-      "checked": false
+      "checked": false,
+      "id": "98ac"
     },
     {
       "value": "BRAVE BULL",
       "label": "BRAVE BULL",
-      "checked": false
+      "checked": false,
+      "id": "f1d8"
     },
     {
       "value": "shock absorber",
       "label": "shock absorber",
-      "checked": false
+      "checked": false,
+      "id": "c211"
     },
     {
       "value": "JIEPOLLY",
       "label": "JIEPOLLY",
-      "checked": false
+      "checked": false,
+      "id": "2def"
     },
     {
       "value": "Xiangle",
       "label": "Xiangle",
-      "checked": false
+      "checked": false,
+      "id": "b01e"
     },
     {
       "value": "lightingbrilliance",
       "label": "lightingbrilliance",
-      "checked": false
+      "checked": false,
+      "id": "d9eb"
     },
     {
       "value": "Ifei Home",
       "label": "Ifei Home",
-      "checked": false
+      "checked": false,
+      "id": "6094"
     },
     {
       "value": "DADAWU",
       "label": "DADAWU",
-      "checked": false
+      "checked": false,
+      "id": "2894"
     },
     {
       "value": "YIOSI",
       "label": "YIOSI",
-      "checked": false
+      "checked": false,
+      "id": "05eb"
     }
   ],
   "categories": [
     {
       "value": "smartphones",
       "label": "smartphones",
-      "checked": false
+      "checked": false,
+      "id": "794d"
     },
     {
       "value": "laptops",
       "label": "laptops",
-      "checked": false
+      "checked": false,
+      "id": "06a7"
     },
     {
       "value": "fragrances",
       "label": "fragrances",
-      "checked": false
+      "checked": false,
+      "id": "a893"
     },
     {
       "value": "skincare",
       "label": "skincare",
-      "checked": false
+      "checked": false,
+      "id": "5a81"
     },
     {
       "value": "groceries",
       "label": "groceries",
-      "checked": false
+      "checked": false,
+      "id": "2c28"
     },
     {
       "value": "home-decoration",
       "label": "home decoration",
-      "checked": false
+      "checked": false,
+      "id": "07a8"
     },
     {
       "value": "furniture",
       "label": "furniture",
-      "checked": false
+      "checked": false,
+      "id": "0dd6"
     },
     {
       "value": "tops",
       "label": "tops",
-      "checked": false
+      "checked": false,
+      "id": "8098"
     },
     {
       "value": "womens-dresses",
       "label": "womens dresses",
-      "checked": false
+      "checked": false,
+      "id": "d88e"
     },
     {
       "value": "womens-shoes",
       "label": "womens shoes",
-      "checked": false
+      "checked": false,
+      "id": "cfab"
     },
     {
       "value": "mens-shirts",
       "label": "mens shirts",
-      "checked": false
+      "checked": false,
+      "id": "4dd8"
     },
     {
       "value": "mens-shoes",
       "label": "mens shoes",
-      "checked": false
+      "checked": false,
+      "id": "a9fb"
     },
     {
       "value": "mens-watches",
       "label": "mens watches",
-      "checked": false
+      "checked": false,
+      "id": "671e"
     },
     {
       "value": "womens-watches",
       "label": "womens watches",
-      "checked": false
+      "checked": false,
+      "id": "2719"
     },
     {
       "value": "womens-bags",
       "label": "womens bags",
-      "checked": false
+      "checked": false,
+      "id": "f654"
     },
     {
       "value": "womens-jewellery",
       "label": "womens jewellery",
-      "checked": false
+      "checked": false,
+      "id": "7f50"
     },
     {
       "value": "sunglasses",
       "label": "sunglasses",
-      "checked": false
+      "checked": false,
+      "id": "8d4c"
     },
     {
       "value": "automotive",
       "label": "automotive",
-      "checked": false
+      "checked": false,
+      "id": "bc51"
     },
     {
       "value": "motorcycle",
       "label": "motorcycle",
-      "checked": false
+      "checked": false,
+      "id": "24da"
     },
     {
       "value": "lighting",
       "label": "lighting",
-      "checked": false
+      "checked": false,
+      "id": "1218"
     }
   ],
   "users": [
@@ -2375,36 +2473,34 @@
       "id": "a726",
       "email": "gaurav@gmail.com",
       "password": "Gaurav@123",
+      "addresses": [
+        {
+          "name": "Rajesh Choudhary",
+          "email": "gauravjoshi7060331206@gmail.com",
+          "phone": "09821045255",
+          "street": "Pradhan enclave burari north delhi",
+          "city": "NEW DELHI",
+          "state": "NCT Delhi",
+          "pinCode": "110084"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "id": "6331",
+      "email": "jekarar986@usoplay.com",
+      "password": "Gaurav@123",
       "addresses": [],
       "role": "user"
     }
   ],
-  "cart": [
-    {
-      "title": "Huawei P30",
-      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": 499,
-      "discountPercentage": 10.58,
-      "rating": 4.09,
-      "stock": 32,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/5/1.jpg",
-        "https://i.dummyjson.com/data/products/5/2.jpg",
-        "https://i.dummyjson.com/data/products/5/3.jpg"
-      ],
-      "productId": 5,
-      "quantity": 1,
-      "user": 2,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
+      "id": "ccd7",
       "items": [
         {
+          "id": "92e3",
           "title": "iPhone X",
           "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
           "price": 899,
@@ -2413,57 +2509,104 @@
           "stock": 34,
           "brand": "Apple",
           "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
           "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+            "https://cdn.dummyjson.com/product-images/2/1.jpg",
+            "https://cdn.dummyjson.com/product-images/2/2.jpg",
+            "https://cdn.dummyjson.com/product-images/2/3.jpg",
+            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
           ],
-          "quantity": 2,
-          "user": 1,
-          "id": 6
+          "productId": "2",
+          "quantity": 1,
+          "user": "a726"
         }
       ],
-      "totalAmount": 1798,
-      "totalItems": 2,
+      "totalAmount": 738,
+      "totalItems": 1,
       "user": {
-        "email": "test@gmail.com",
-        "password": "Qwerty123",
+        "id": "a726",
+        "email": "gaurav@gmail.com",
+        "password": "Gaurav@123",
         "addresses": [
           {
-            "name": "Abhishek R",
-            "email": "test@gmail.com",
-            "phone": "1234567788",
-            "street": "11th Main",
-            "city": "Banaglore",
-            "state": "Karnataka",
-            "pinCode": "560034"
-          },
-          {
-            "name": "Abhishek R",
-            "email": "test@gmail.com",
-            "phone": "1234567788",
-            "street": "11th Main",
-            "city": "Banaglore",
-            "state": "Karnataka",
-            "pinCode": "560034"
+            "name": "Rajesh Choudhary",
+            "email": "gauravjoshi7060331206@gmail.com",
+            "phone": "09821045255",
+            "street": "Pradhan enclave burari north delhi",
+            "city": "NEW DELHI",
+            "state": "NCT Delhi",
+            "pinCode": "110084"
           }
         ],
-        "id": 1
+        "role": "user"
       },
       "paymentMethod": "cash",
       "selectedAddress": {
-        "name": "Abhishek R",
-        "email": "test@gmail.com",
-        "phone": "1234567788",
-        "street": "11th Main",
-        "city": "Banaglore",
-        "state": "Karnataka",
-        "pinCode": "560034"
+        "name": "Rajesh Choudhary",
+        "email": "gauravjoshi7060331206@gmail.com",
+        "phone": "09821045255",
+        "street": "Pradhan enclave burari north delhi",
+        "city": "NEW DELHI",
+        "state": "NCT Delhi",
+        "pinCode": "110084"
       },
-      "status": "dispatched",
-      "id": 1
+      "status": "pending"
+    },
+    {
+      "id": "3a1d",
+      "items": [
+        {
+          "id": "ae93",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/2/1.jpg",
+            "https://cdn.dummyjson.com/product-images/2/2.jpg",
+            "https://cdn.dummyjson.com/product-images/2/3.jpg",
+            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+          ],
+          "productId": "2",
+          "quantity": 1,
+          "user": "a726"
+        }
+      ],
+      "totalAmount": 738,
+      "totalItems": 1,
+      "user": {
+        "id": "a726",
+        "email": "gaurav@gmail.com",
+        "password": "Gaurav@123",
+        "addresses": [
+          {
+            "name": "Rajesh Choudhary",
+            "email": "gauravjoshi7060331206@gmail.com",
+            "phone": "09821045255",
+            "street": "Pradhan enclave burari north delhi",
+            "city": "NEW DELHI",
+            "state": "NCT Delhi",
+            "pinCode": "110084"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Rajesh Choudhary",
+        "email": "gauravjoshi7060331206@gmail.com",
+        "phone": "09821045255",
+        "street": "Pradhan enclave burari north delhi",
+        "city": "NEW DELHI",
+        "state": "NCT Delhi",
+        "pinCode": "110084"
+      },
+      "status": "pending"
     }
   ]
 }
