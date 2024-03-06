@@ -13,7 +13,7 @@ import {
   ArrowUpIcon,
   ArrowDownIcon,
 } from '@heroicons/react/24/outline';
-import Pagination from '../../../common/Pagination';
+import Pagination from '../../common/Pagination';
 
 function AdminOrders() {
   const [page, setPage] = useState(1);
@@ -24,7 +24,7 @@ function AdminOrders() {
   const [sort, setSort] = useState({});
 
   const handleEdit = (order) => {
-    editableOrderId !== -1 ? setEditableOrderId(-1) : setEditableOrderId(order.id);
+    setEditableOrderId(order.id);
   };
   const handleShow = () => {
     console.log('handleShow');

@@ -1,4 +1,4 @@
-import NavBar from '../features/navbar/NavBar';
+import NavBar from '../features/navbar/Navbar';
 import UserProfile from '../features/user/components/UserProfile';
 
 function UserProfilePage() {

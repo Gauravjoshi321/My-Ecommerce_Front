@@ -1,4 +1,4 @@
-import NavBar from '../features/navbar/NavBar';
+import NavBar from '../features/navbar/Navbar';
 import UserOrders from '../features/user/components/UserOrders';
 
 function UserOrdersPage() {

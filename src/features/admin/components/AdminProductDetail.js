@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { RadioGroup } from '@headlessui/react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProductByIdAsync, selectProductById } from '../../product/ProductSlice';
+import { fetchProductByIdAsync, selectProductById } from '../../product/productSlice';
 import { useParams } from 'react-router-dom';
 import { addToCartAsync } from '../../cart/cartSlice';
 import { selectLoggedInUser } from '../../auth/authSlice';
@@ -327,7 +327,7 @@ export default function AdminProductDetail() {
                 </h3>
 
                 <div className="mt-4">
-                  <ul className="list-disc space-y-2 pl-4 text-sm">
+                  <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
                     {highlights.map((highlight) => (
                       <li key={highlight} className="text-gray-400">
                         <span className="text-gray-600">{highlight}</span>

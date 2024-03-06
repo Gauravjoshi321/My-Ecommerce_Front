@@ -1,18 +1,23 @@
+import { Fragment, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
-
 import {
   deleteItemFromCartAsync,
+  selectCartStatus,
   selectItems,
   updateCartAsync,
 } from './cartSlice';
+import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { discountedPrice } from '../../app/constants';
+import { Grid } from 'react-loader-spinner';
+import Modal from '../common/Modal';
 
-
-function Cart() {
+export default function Cart() {
   const dispatch = useDispatch();
+
   const items = useSelector(selectItems);
+  const status = useSelector(selectCartStatus);
+  const [openModal, setOpenModal] = useState(null);
 
   const totalAmount = items.reduce(
     (amount, item) => discountedPrice(item) * item.quantity + amount,
@@ -25,19 +30,32 @@ function Cart() {
   };
 
   const handleRemove = (e, id) => {
-    dispatch(deleteItemFromCartAsync(id))
-  }
+    dispatch(deleteItemFromCartAsync(id));
+  };
 
   return (
     <>
-      {!items.length && <Navigate to='/' replace={true}></Navigate>}
+      {!items.length && <Navigate to="/" replace={true}></Navigate>}
 
       <div>
-        <div className="mx-auto max-w-6xl mt-12 px-4 sm:px-6 lg:px-8 bg-white">
-
+        <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-            <h1 className="text-4xl font-semibold my-6 tracking-tight text-gray-900">Cart</h1>
+            <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
+              Cart
+            </h1>
             <div className="flow-root">
+              {status === 'loading' ? (
+                <Grid
+                  height="80"
+                  width="80"
+                  color="rgb(79, 70, 229) "
+                  ariaLabel="grid-loading"
+                  radius="12.5"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              ) : null}
               <ul className="-my-6 divide-y divide-gray-200">
                 {items.map((item) => (
                   <li key={item.id} className="flex py-6">
@@ -55,16 +73,24 @@ function Cart() {
                           <h3>
                             <a href={item.href}>{item.title}</a>
                           </h3>
-                          <p className="ml-4">${discountedPrice(item)}</p>                        </div>
-                        <p className="mt-1 text-sm text-gray-500">{item.brand}</p>
+                          <p className="ml-4">${discountedPrice(item)}</p>
+                        </div>
+                        <p className="mt-1 text-sm text-gray-500">
+                          {item.brand}
+                        </p>
                       </div>
                       <div className="flex flex-1 items-end justify-between text-sm">
                         <div className="text-gray-500">
-                          <label htmlFor="quantity" className="inline mr-2 text-sm font-medium leading-6 text-gray-900">
-                            Qty.
+                          <label
+                            htmlFor="quantity"
+                            className="inline mr-5 text-sm font-medium leading-6 text-gray-900"
+                          >
+                            Qty
                           </label>
-
-                          <select onChange={(e) => handleQuantity(e, item)} value={item.quantity}>
+                          <select
+                            onChange={(e) => handleQuantity(e, item)}
+                            value={item.quantity}
+                          >
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -74,8 +100,17 @@ function Cart() {
                         </div>
 
                         <div className="flex">
+                          <Modal
+                            title={`Delete ${item.title}`}
+                            message="Are you sure you want to delete this Cart item ?"
+                            dangerOption="Delete"
+                            cancelOption="Cancel"
+                            dangerAction={(e) => handleRemove(e, item.id)}
+                            cancelAction={()=>setOpenModal(null)}
+                            showModal={openModal === item.id}
+                          ></Modal>
                           <button
-                            onClick={e => handleRemove(e, item.id)}
+                            onClick={e=>{setOpenModal(item.id)}}
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
@@ -91,7 +126,7 @@ function Cart() {
           </div>
 
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-            <div className="flex justify-between text-base font-medium text-gray-900">
+            <div className="flex justify-between my-2 text-base font-medium text-gray-900">
               <p>Subtotal</p>
               <p>$ {totalAmount}</p>
             </div>
@@ -99,8 +134,9 @@ function Cart() {
               <p>Total Items in Cart</p>
               <p>{totalItems} items</p>
             </div>
-
-            <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <p className="mt-0.5 text-sm text-gray-500">
+              Shipping and taxes calculated at checkout.
+            </p>
             <div className="mt-6">
               <Link
                 to="/checkout"
@@ -111,7 +147,7 @@ function Cart() {
             </div>
             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
               <p>
-                or{' '}
+                or
                 <Link to="/">
                   <button
                     type="button"
@@ -127,7 +163,5 @@ function Cart() {
         </div>
       </div>
     </>
-  )
+  );
 }
-
-export default Cart;

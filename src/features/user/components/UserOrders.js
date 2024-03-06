@@ -1,17 +1,20 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchLoggedInUserOrderAsync, selectUserInfo, selectUserOrders } from '../userSlice';
+import {
+  fetchLoggedInUserOrderAsync,
+  selectUserInfo,
+  selectUserOrders,
+} from '../userSlice';
 import { discountedPrice } from '../../../app/constants';
-
 
 export default function UserOrders() {
   const dispatch = useDispatch();
-  const orders = useSelector(selectUserOrders);
   const user = useSelector(selectUserInfo);
+  const orders = useSelector(selectUserOrders);
 
   useEffect(() => {
     dispatch(fetchLoggedInUserOrderAsync(user.id));
-  }, [dispatch, user.id]);
+  }, [dispatch, user]);
 
   return (
     <div>
@@ -27,7 +30,7 @@ export default function UserOrders() {
                   Order Status : {order.status}
                 </h3>
                 <div className="flow-root">
-                  <ul role="list" className="-my-6 divide-y divide-gray-200">
+                  <ul className="-my-6 divide-y divide-gray-200">
                     {order.items.map((item) => (
                       <li key={item.id} className="flex py-6">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -44,7 +47,8 @@ export default function UserOrders() {
                               <h3>
                                 <a href={item.href}>{item.title}</a>
                               </h3>
-                              <p className="ml-4">${discountedPrice(item)}</p>                            </div>
+                              <p className="ml-4">${discountedPrice(item)}</p>
+                            </div>
                             <p className="mt-1 text-sm text-gray-500">
                               {item.brand}
                             </p>
@@ -59,8 +63,7 @@ export default function UserOrders() {
                               </label>
                             </div>
 
-                            <div className="flex">
-                            </div>
+                            <div className="flex"></div>
                           </div>
                         </div>
                       </li>
@@ -95,8 +98,6 @@ export default function UserOrders() {
                       </p>
                     </div>
                   </div>
-
-
                   <div className="hidden sm:flex sm:flex-col sm:items-end">
                     <p className="text-sm leading-6 text-gray-900">
                       Phone: {order.selectedAddress.phone}
@@ -108,9 +109,8 @@ export default function UserOrders() {
                 </div>
               </div>
             </div>
-
           </div>
-        </div >
+        </div>
       ))}
     </div>
   );

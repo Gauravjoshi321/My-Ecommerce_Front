@@ -1,11 +1,14 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchLoggedInUserOrders, updateUser, fetchLoggedInUser } from './userAPI';
+import {
+  fetchLoggedInUserOrders,
+  updateUser,
+  fetchLoggedInUser,
+} from './userAPI';
 
 const initialState = {
   userOrders: [],
   status: 'idle',
-  userInfo: null,
-  // this info will be used in case of detailed user info, while auth will 
+  userInfo: null, // this info will be used in case of detailed user info, while auth will
   // only be used for loggedInUser id etc checks
 };
 
@@ -29,21 +32,18 @@ export const fetchLoggedInUserAsync = createAsyncThunk(
 
 export const updateUserAsync = createAsyncThunk(
   'user/updateUser',
-  async (update) => {
-    const response = await updateUser(update);
+  async (id) => {
+    const response = await updateUser(id);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
 
-
 export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
+   
   },
   extraReducers: (builder) => {
     builder
@@ -66,6 +66,7 @@ export const userSlice = createSlice({
       })
       .addCase(fetchLoggedInUserAsync.fulfilled, (state, action) => {
         state.status = 'idle';
+        // this info can be different or more from logged-in User info
         state.userInfo = action.payload;
       });
   },
@@ -74,7 +75,6 @@ export const userSlice = createSlice({
 export const selectUserOrders = (state) => state.user.userOrders;
 export const selectUserInfo = (state) => state.user.userInfo;
 
-
-export const { increment } = userSlice.actions;
+// export const { increment } = userSlice.actions;
 
 export default userSlice.reducer;

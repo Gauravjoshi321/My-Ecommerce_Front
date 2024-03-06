@@ -1,22 +1,20 @@
-// export function fetchAllProducts() {
-//   return new Promise(async (resolve) => {
-//     // TODO: will make it more dynamic
+export function fetchAllProducts() {
+  return new Promise(async (resolve) => {
+    //TODO: we will not hard-code server URL here
+    const response = await fetch('http://localhost:8080/products');
 
-//     const res = await fetch("http://localhost:8080/products");
-//     const data = await res.json();
-
-//     resolve({ data });
-//   });
-// }
+    const data = await response.json();
+    resolve({ data });
+  });
+}
 
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
-    const response = await fetch(`http://localhost:8080/products?id=${id}`);
-    const data = await response.json()
-    resolve({ data })
-  }
-  );
+    const response = await fetch('http://localhost:8080/products?id=' + id);
+    const data = await response.json();
+    resolve({ data });
+  });
 }
 
 export function createProduct(product) {
@@ -50,59 +48,49 @@ export function updateProduct(update) {
 export function fetchProductsByFilters(filter, sort, pagination) {
   // filter = {"category":["smartphone","laptops"]}
   // sort = {_sort:"price",_order="desc"}
-  // pagination = {_page:1,_limit=10} 
-
+  // pagination = {_page:1,_limit=10}
   // TODO : on server we will support multi values in filter
   // TODO : Server will filter deleted products in case of non-admin
 
   let queryString = '';
-
-  // For Filter
   for (let key in filter) {
     const categoryValues = filter[key];
     if (categoryValues.length) {
-      const lastCategoryValue = categoryValues[categoryValues.length - 1]
-      queryString += `${key}=${lastCategoryValue} & `
+      const lastCategoryValue = categoryValues[categoryValues.length - 1];
+      queryString += `${key}=${lastCategoryValue}&`;
     }
   }
-
-  // For Sorting
   for (let key in sort) {
-    queryString += `${key}=${sort[key]} & `
+    queryString += `${key}=${sort[key]}&`;
   }
-
-  // For pagination
+  console.log(pagination);
   for (let key in pagination) {
-    queryString += `${key}=${pagination[key]} & `
+    queryString += `${key}=${pagination[key]}&`;
   }
-
 
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
-    const response = await fetch('http://localhost:8080/products?' + queryString)
-    const data = await response.json()
-
-    const totalItems = await response.headers.get('X-Total-Count')
-
-    resolve({ data: { products: data, totalItems: +totalItems } })
-  }
-  );
+    const response = await fetch(
+      'http://localhost:8080/products?' + queryString
+    );
+    const data = await response.json();
+    const totalItems = await response.headers.get('X-Total-Count');
+    resolve({ data: { products: data, totalItems: +totalItems } });
+  });
 }
 
 export function fetchCategories() {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/categories')
-    const data = await response.json()
-    resolve({ data })
-  }
-  );
+    const response = await fetch('http://localhost:8080/categories');
+    const data = await response.json();
+    resolve({ data });
+  });
 }
 
 export function fetchBrands() {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/brands')
-    const data = await response.json()
-    resolve({ data })
-  }
-  );
+    const response = await fetch('http://localhost:8080/brands');
+    const data = await response.json();
+    resolve({ data });
+  });
 }

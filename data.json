@@ -1838,653 +1838,573 @@
         "https://cdn.dummyjson.com/product-images/100/3.jpg",
         "https://cdn.dummyjson.com/product-images/100/thumbnail.jpg"
       ]
+    },
+    {
+      "id": "e5ab",
+      "title": "sdfg",
+      "description": "fdf",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 222,
+      "discountPercentage": 22,
+      "stock": 22,
+      "thumbnail": "22",
+      "images": [
+        "22",
+        "22",
+        "22",
+        "22"
+      ],
+      "rating": 0
+    },
+    {
+      "id": "3725",
+      "title": "qq",
+      "description": "q",
+      "brand": "Apple",
+      "category": "sunglasses",
+      "price": 111,
+      "discountPercentage": 1,
+      "stock": 1,
+      "thumbnail": "111",
+      "images": [
+        "1",
+        "1",
+        "1",
+        "111"
+      ],
+      "rating": 0
     }
   ],
   "brands": [
     {
       "value": "Apple",
       "label": "Apple",
-      "checked": false,
-      "id": "c820"
+      "checked": false
     },
     {
       "value": "Samsung",
       "label": "Samsung",
-      "checked": false,
-      "id": "7f04"
+      "checked": false
     },
     {
       "value": "OPPO",
       "label": "OPPO",
-      "checked": false,
-      "id": "1706"
+      "checked": false
     },
     {
       "value": "Huawei",
       "label": "Huawei",
-      "checked": false,
-      "id": "3c4f"
+      "checked": false
     },
     {
       "value": "Microsoft Surface",
       "label": "Microsoft Surface",
-      "checked": false,
-      "id": "7e5a"
+      "checked": false
     },
     {
       "value": "Infinix",
       "label": "Infinix",
-      "checked": false,
-      "id": "386c"
+      "checked": false
     },
     {
       "value": "HP Pavilion",
       "label": "HP Pavilion",
-      "checked": false,
-      "id": "7bf8"
+      "checked": false
     },
     {
       "value": "Impression of Acqua Di Gio",
       "label": "Impression of Acqua Di Gio",
-      "checked": false,
-      "id": "6145"
+      "checked": false
     },
     {
       "value": "Royal_Mirage",
       "label": "Royal_Mirage",
-      "checked": false,
-      "id": "8283"
+      "checked": false
     },
     {
       "value": "Fog Scent Xpressio",
       "label": "Fog Scent Xpressio",
-      "checked": false,
-      "id": "8cdc"
+      "checked": false
     },
     {
       "value": "Al Munakh",
       "label": "Al Munakh",
-      "checked": false,
-      "id": "af1e"
+      "checked": false
     },
     {
       "value": "Lord - Al-Rehab",
       "label": "Lord   Al Rehab",
-      "checked": false,
-      "id": "ad81"
+      "checked": false
     },
     {
       "value": "L'Oreal Paris",
       "label": "L'Oreal Paris",
-      "checked": false,
-      "id": "633e"
+      "checked": false
     },
     {
       "value": "Hemani Tea",
       "label": "Hemani Tea",
-      "checked": false,
-      "id": "b797"
+      "checked": false
     },
     {
       "value": "Dermive",
       "label": "Dermive",
-      "checked": false,
-      "id": "48fa"
+      "checked": false
     },
     {
       "value": "ROREC White Rice",
       "label": "ROREC White Rice",
-      "checked": false,
-      "id": "33c7"
+      "checked": false
     },
     {
       "value": "Fair & Clear",
       "label": "Fair & Clear",
-      "checked": false,
-      "id": "586a"
+      "checked": false
     },
     {
       "value": "Saaf & Khaas",
       "label": "Saaf & Khaas",
-      "checked": false,
-      "id": "ff2b"
+      "checked": false
     },
     {
       "value": "Bake Parlor Big",
       "label": "Bake Parlor Big",
-      "checked": false,
-      "id": "427a"
+      "checked": false
     },
     {
       "value": "Baking Food Items",
       "label": "Baking Food Items",
-      "checked": false,
-      "id": "9c11"
+      "checked": false
     },
     {
       "value": "fauji",
       "label": "fauji",
-      "checked": false,
-      "id": "0feb"
+      "checked": false
     },
     {
       "value": "Dry Rose",
       "label": "Dry Rose",
-      "checked": false,
-      "id": "1e21"
+      "checked": false
     },
     {
       "value": "Boho Decor",
       "label": "Boho Decor",
-      "checked": false,
-      "id": "a8b5"
+      "checked": false
     },
     {
       "value": "Flying Wooden",
       "label": "Flying Wooden",
-      "checked": false,
-      "id": "bab2"
+      "checked": false
     },
     {
       "value": "LED Lights",
       "label": "LED Lights",
-      "checked": false,
-      "id": "7da7"
+      "checked": false
     },
     {
       "value": "luxury palace",
       "label": "luxury palace",
-      "checked": false,
-      "id": "9178"
+      "checked": false
     },
     {
       "value": "Golden",
       "label": "Golden",
-      "checked": false,
-      "id": "8c9d"
+      "checked": false
     },
     {
       "value": "Furniture Bed Set",
       "label": "Furniture Bed Set",
-      "checked": false,
-      "id": "7ebf"
+      "checked": false
     },
     {
       "value": "Ratttan Outdoor",
       "label": "Ratttan Outdoor",
-      "checked": false,
-      "id": "05bf"
+      "checked": false
     },
     {
       "value": "Kitchen Shelf",
       "label": "Kitchen Shelf",
-      "checked": false,
-      "id": "7aef"
+      "checked": false
     },
     {
       "value": "Multi Purpose",
       "label": "Multi Purpose",
-      "checked": false,
-      "id": "63d8"
+      "checked": false
     },
     {
       "value": "AmnaMart",
       "label": "AmnaMart",
-      "checked": false,
-      "id": "cba5"
+      "checked": false
     },
     {
       "value": "Professional Wear",
       "label": "Professional Wear",
-      "checked": false,
-      "id": "a55d"
+      "checked": false
     },
     {
       "value": "Soft Cotton",
       "label": "Soft Cotton",
-      "checked": false,
-      "id": "0170"
+      "checked": false
     },
     {
       "value": "Top Sweater",
       "label": "Top Sweater",
-      "checked": false,
-      "id": "1c30"
+      "checked": false
     },
     {
       "value": "RED MICKY MOUSE..",
       "label": "RED MICKY MOUSE..",
-      "checked": false,
-      "id": "5325"
+      "checked": false
     },
     {
       "value": "Digital Printed",
       "label": "Digital Printed",
-      "checked": false,
-      "id": "8fc1"
+      "checked": false
     },
     {
       "value": "Ghazi Fabric",
       "label": "Ghazi Fabric",
-      "checked": false,
-      "id": "bb7a"
+      "checked": false
     },
     {
       "value": "IELGY",
       "label": "IELGY",
-      "checked": false,
-      "id": "4191"
+      "checked": false
     },
     {
       "value": "IELGY fashion",
       "label": "IELGY fashion",
-      "checked": false,
-      "id": "ba6f"
+      "checked": false
     },
     {
       "value": "Synthetic Leather",
       "label": "Synthetic Leather",
-      "checked": false,
-      "id": "a9a7"
+      "checked": false
     },
     {
       "value": "Sandals Flip Flops",
       "label": "Sandals Flip Flops",
-      "checked": false,
-      "id": "f04e"
+      "checked": false
     },
     {
       "value": "Maasai Sandals",
       "label": "Maasai Sandals",
-      "checked": false,
-      "id": "08b0"
+      "checked": false
     },
     {
       "value": "Arrivals Genuine",
       "label": "Arrivals Genuine",
-      "checked": false,
-      "id": "dae0"
+      "checked": false
     },
     {
       "value": "Vintage Apparel",
       "label": "Vintage Apparel",
-      "checked": false,
-      "id": "0ec8"
+      "checked": false
     },
     {
       "value": "FREE FIRE",
       "label": "FREE FIRE",
-      "checked": false,
-      "id": "c836"
+      "checked": false
     },
     {
       "value": "The Warehouse",
       "label": "The Warehouse",
-      "checked": false,
-      "id": "4e11"
+      "checked": false
     },
     {
       "value": "Sneakers",
       "label": "Sneakers",
-      "checked": false,
-      "id": "81d5"
+      "checked": false
     },
     {
       "value": "Rubber",
       "label": "Rubber",
-      "checked": false,
-      "id": "d88a"
+      "checked": false
     },
     {
       "value": "Naviforce",
       "label": "Naviforce",
-      "checked": false,
-      "id": "5bb4"
+      "checked": false
     },
     {
       "value": "SKMEI 9117",
       "label": "SKMEI 9117",
-      "checked": false,
-      "id": "e0ec"
+      "checked": false
     },
     {
       "value": "Strap Skeleton",
       "label": "Strap Skeleton",
-      "checked": false,
-      "id": "619a"
+      "checked": false
     },
     {
       "value": "Stainless",
       "label": "Stainless",
-      "checked": false,
-      "id": "3445"
+      "checked": false
     },
     {
       "value": "Eastern Watches",
       "label": "Eastern Watches",
-      "checked": false,
-      "id": "e898"
+      "checked": false
     },
     {
       "value": "Luxury Digital",
       "label": "Luxury Digital",
-      "checked": false,
-      "id": "aa22"
+      "checked": false
     },
     {
       "value": "Watch Pearls",
       "label": "Watch Pearls",
-      "checked": false,
-      "id": "4422"
+      "checked": false
     },
     {
       "value": "Bracelet",
       "label": "Bracelet",
-      "checked": false,
-      "id": "afc3"
+      "checked": false
     },
     {
       "value": "LouisWill",
       "label": "LouisWill",
-      "checked": false,
-      "id": "fa64"
+      "checked": false
     },
     {
       "value": "Copenhagen Luxe",
       "label": "Copenhagen Luxe",
-      "checked": false,
-      "id": "4334"
+      "checked": false
     },
     {
       "value": "Steal Frame",
       "label": "Steal Frame",
-      "checked": false,
-      "id": "44e4"
+      "checked": false
     },
     {
       "value": "Darojay",
       "label": "Darojay",
-      "checked": false,
-      "id": "0be9"
+      "checked": false
     },
     {
       "value": "Fashion Jewellery",
       "label": "Fashion Jewellery",
-      "checked": false,
-      "id": "8077"
+      "checked": false
     },
     {
       "value": "Cuff Butterfly",
       "label": "Cuff Butterfly",
-      "checked": false,
-      "id": "4be2"
+      "checked": false
     },
     {
       "value": "Designer Sun Glasses",
       "label": "Designer Sun Glasses",
-      "checked": false,
-      "id": "117e"
+      "checked": false
     },
     {
       "value": "mastar watch",
       "label": "mastar watch",
-      "checked": false,
-      "id": "36ef"
+      "checked": false
     },
     {
       "value": "Car Aux",
       "label": "Car Aux",
-      "checked": false,
-      "id": "ae01"
+      "checked": false
     },
     {
       "value": "W1209 DC12V",
       "label": "W1209 DC12V",
-      "checked": false,
-      "id": "1374"
+      "checked": false
     },
     {
       "value": "TC Reusable",
       "label": "TC Reusable",
-      "checked": false,
-      "id": "d894"
+      "checked": false
     },
     {
       "value": "Neon LED Light",
       "label": "Neon LED Light",
-      "checked": false,
-      "id": "8e4d"
+      "checked": false
     },
     {
       "value": "METRO 70cc Motorcycle - MR70",
       "label": "METRO 70cc Motorcycle   MR70",
-      "checked": false,
-      "id": "edb2"
+      "checked": false
     },
     {
       "value": "BRAVE BULL",
       "label": "BRAVE BULL",
-      "checked": false,
-      "id": "e393"
+      "checked": false
     },
     {
       "value": "shock absorber",
       "label": "shock absorber",
-      "checked": false,
-      "id": "dfd1"
+      "checked": false
     },
     {
       "value": "JIEPOLLY",
       "label": "JIEPOLLY",
-      "checked": false,
-      "id": "fbe8"
+      "checked": false
     },
     {
       "value": "Xiangle",
       "label": "Xiangle",
-      "checked": false,
-      "id": "2087"
+      "checked": false
     },
     {
       "value": "lightingbrilliance",
       "label": "lightingbrilliance",
-      "checked": false,
-      "id": "9b09"
+      "checked": false
     },
     {
       "value": "Ifei Home",
       "label": "Ifei Home",
-      "checked": false,
-      "id": "8ea3"
+      "checked": false
     },
     {
       "value": "DADAWU",
       "label": "DADAWU",
-      "checked": false,
-      "id": "80eb"
+      "checked": false
     },
     {
       "value": "YIOSI",
       "label": "YIOSI",
-      "checked": false,
-      "id": "7e68"
+      "checked": false
     }
   ],
   "categories": [
     {
       "value": "smartphones",
       "label": "smartphones",
-      "checked": false,
-      "id": "b9da"
+      "checked": false
     },
     {
       "value": "laptops",
       "label": "laptops",
-      "checked": false,
-      "id": "09d7"
+      "checked": false
     },
     {
       "value": "fragrances",
       "label": "fragrances",
-      "checked": false,
-      "id": "b1bc"
+      "checked": false
     },
     {
       "value": "skincare",
       "label": "skincare",
-      "checked": false,
-      "id": "7bde"
+      "checked": false
     },
     {
       "value": "groceries",
       "label": "groceries",
-      "checked": false,
-      "id": "c647"
+      "checked": false
     },
     {
       "value": "home-decoration",
       "label": "home decoration",
-      "checked": false,
-      "id": "239f"
+      "checked": false
     },
     {
       "value": "furniture",
       "label": "furniture",
-      "checked": false,
-      "id": "7a36"
+      "checked": false
     },
     {
       "value": "tops",
       "label": "tops",
-      "checked": false,
-      "id": "fb3b"
+      "checked": false
     },
     {
       "value": "womens-dresses",
       "label": "womens dresses",
-      "checked": false,
-      "id": "23d8"
+      "checked": false
     },
     {
       "value": "womens-shoes",
       "label": "womens shoes",
-      "checked": false,
-      "id": "519b"
+      "checked": false
     },
     {
       "value": "mens-shirts",
       "label": "mens shirts",
-      "checked": false,
-      "id": "0211"
+      "checked": false
     },
     {
       "value": "mens-shoes",
       "label": "mens shoes",
-      "checked": false,
-      "id": "5ab0"
+      "checked": false
     },
     {
       "value": "mens-watches",
       "label": "mens watches",
-      "checked": false,
-      "id": "c376"
+      "checked": false
     },
     {
       "value": "womens-watches",
       "label": "womens watches",
-      "checked": false,
-      "id": "03f7"
+      "checked": false
     },
     {
       "value": "womens-bags",
       "label": "womens bags",
-      "checked": false,
-      "id": "a3d5"
+      "checked": false
     },
     {
       "value": "womens-jewellery",
       "label": "womens jewellery",
-      "checked": false,
-      "id": "0170"
+      "checked": false
     },
     {
       "value": "sunglasses",
       "label": "sunglasses",
-      "checked": false,
-      "id": "6a44"
+      "checked": false
     },
     {
       "value": "automotive",
       "label": "automotive",
-      "checked": false,
-      "id": "54fd"
+      "checked": false
     },
     {
       "value": "motorcycle",
       "label": "motorcycle",
-      "checked": false,
-      "id": "4b76"
+      "checked": false
     },
     {
       "value": "lighting",
       "label": "lighting",
-      "checked": false,
-      "id": "03d9"
+      "checked": false
     }
   ],
   "users": [
     {
-      "id": "85aa",
-      "email": "admin@natours.io",
-      "password": "Ym5aVeLj?LycsWH",
-      "role": "admin",
-      "addresses": [
-        {
-          "name": "SANJAY JOSHI",
-          "email": "sanjay9716148460@gmail.com",
-          "phone": "09716148460",
-          "street": "Pradhan enclave burari north delhi",
-          "city": "Delhi",
-          "state": "Delhi",
-          "pinCode": "123456"
-        },
-        {
-          "name": "Geetika Joshi",
-          "email": "sanjay9716148460@gmail.com",
-          "phone": "09971851549",
-          "street": "Pradhan enclave burari north delhi",
-          "city": "Delhi",
-          "state": "NCT Delhi",
-          "pinCode": "110084"
-        },
-        {
-          "name": "SANJAY JOSHI",
-          "email": "sanjay9716148460@gmail.com",
-          "phone": "09716148460",
-          "street": "Pradhan enclave burari north delhi",
-          "city": "Delhi",
-          "state": "Delhi",
-          "pinCode": "110084"
-        },
-        {
-          "name": "Gaurav",
-          "email": "sanjay9716148460@gmail.com",
-          "phone": "8392975268",
-          "street": "Pradhan enclave burari north delhi",
-          "city": "NORTH DELHI",
-          "state": "DELHI",
-          "pinCode": "110084"
-        }
-      ]
+      "id": "a726",
+      "email": "gaurav@gmail.com",
+      "password": "Gaurav@123",
+      "addresses": [],
+      "role": "user"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/5/1.jpg",
+        "https://i.dummyjson.com/data/products/5/2.jpg",
+        "https://i.dummyjson.com/data/products/5/3.jpg"
+      ],
+      "productId": 5,
+      "quantity": 1,
+      "user": 2,
+      "id": 1
+    }
+  ],
   "orders": [
     {
-      "id": "5867",
       "items": [
         {
-          "id": 2,
           "title": "iPhone X",
           "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
           "price": 899,
@@ -2493,179 +2413,57 @@
           "stock": 34,
           "brand": "Apple",
           "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
           "images": [
-            "https://cdn.dummyjson.com/product-images/2/1.jpg",
-            "https://cdn.dummyjson.com/product-images/2/2.jpg",
-            "https://cdn.dummyjson.com/product-images/2/3.jpg",
-            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
           ],
-          "quantity": 1,
-          "user": "85aa"
-        },
-        {
-          "id": 4,
-          "title": "OPPOF19",
-          "description": "OPPO F19 is officially announced on April 2021.",
-          "price": 280,
-          "discountPercentage": 17.91,
-          "rating": 4.3,
-          "stock": 123,
-          "brand": "OPPO",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/4/1.jpg",
-            "https://cdn.dummyjson.com/product-images/4/2.jpg",
-            "https://cdn.dummyjson.com/product-images/4/3.jpg",
-            "https://cdn.dummyjson.com/product-images/4/4.jpg",
-            "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "85aa"
-        },
-        {
-          "id": 4,
-          "title": "OPPOF19",
-          "description": "OPPO F19 is officially announced on April 2021.",
-          "price": 280,
-          "discountPercentage": 17.91,
-          "rating": 4.3,
-          "stock": 123,
-          "brand": "OPPO",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/4/1.jpg",
-            "https://cdn.dummyjson.com/product-images/4/2.jpg",
-            "https://cdn.dummyjson.com/product-images/4/3.jpg",
-            "https://cdn.dummyjson.com/product-images/4/4.jpg",
-            "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "85aa"
+          "quantity": 2,
+          "user": 1,
+          "id": 6
         }
       ],
-      "totalAmount": 1459,
-      "totalItems": 3,
+      "totalAmount": 1798,
+      "totalItems": 2,
       "user": {
-        "id": "85aa",
-        "email": "admin@natours.io",
-        "password": "Ym5aVeLj?LycsWH",
+        "email": "test@gmail.com",
+        "password": "Qwerty123",
         "addresses": [
           {
-            "name": "Rajesh Choudhary",
-            "email": "gauravjoshi7060331206@gmail.com",
-            "phone": "09821045255",
-            "street": "Pradhan enclave burari north delhi",
-            "city": "NEW DELHI",
-            "state": "NCT Delhi",
-            "pinCode": "110084"
+            "name": "Abhishek R",
+            "email": "test@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
           },
           {
-            "name": "SANJAY JOSHI",
-            "email": "sanjay9716148460@gmail.com",
-            "phone": "09716148460",
-            "street": "Pradhan enclave burari north delhi",
-            "city": "Delhi",
-            "state": "Delhi",
-            "pinCode": "110084"
+            "name": "Abhishek R",
+            "email": "test@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
           }
-        ]
+        ],
+        "id": 1
       },
       "paymentMethod": "cash",
       "selectedAddress": {
-        "name": "SANJAY JOSHI",
-        "email": "sanjay9716148460@gmail.com",
-        "phone": "09716148460",
-        "street": "Pradhan enclave burari north delhi",
-        "city": "Delhi",
-        "state": "Delhi",
-        "pinCode": "110084"
+        "name": "Abhishek R",
+        "email": "test@gmail.com",
+        "phone": "1234567788",
+        "street": "11th Main",
+        "city": "Banaglore",
+        "state": "Karnataka",
+        "pinCode": "560034"
       },
-      "status": "pending"
-    },
-    {
-      "id": "402f",
-      "items": [
-        {
-          "id": "6d0e",
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/1/1.jpg",
-            "https://cdn.dummyjson.com/product-images/1/2.jpg",
-            "https://cdn.dummyjson.com/product-images/1/3.jpg",
-            "https://cdn.dummyjson.com/product-images/1/4.jpg",
-            "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "85aa"
-        }
-      ],
-      "totalAmount": 549,
-      "totalItems": 1,
-      "user": {
-        "id": "85aa",
-        "email": "admin@natours.io",
-        "password": "Ym5aVeLj?LycsWH",
-        "addresses": [
-          {
-            "name": "SANJAY JOSHI",
-            "email": "sanjay9716148460@gmail.com",
-            "phone": "09716148460",
-            "street": "Pradhan enclave burari north delhi",
-            "city": "Delhi",
-            "state": "Delhi",
-            "pinCode": "123456"
-          },
-          {
-            "name": "Geetika Joshi",
-            "email": "sanjay9716148460@gmail.com",
-            "phone": "09971851549",
-            "street": "Pradhan enclave burari north delhi",
-            "city": "Delhi",
-            "state": "NCT Delhi",
-            "pinCode": "110084"
-          },
-          {
-            "name": "SANJAY JOSHI",
-            "email": "sanjay9716148460@gmail.com",
-            "phone": "09716148460",
-            "street": "Pradhan enclave burari north delhi",
-            "city": "Delhi",
-            "state": "Delhi",
-            "pinCode": "110084"
-          },
-          {
-            "name": "Gaurav",
-            "email": "sanjay9716148460@gmail.com",
-            "phone": "8392975268",
-            "street": "Pradhan enclave burari north delhi",
-            "city": "NORTH DELHI",
-            "state": "DELHI",
-            "pinCode": "110084"
-          }
-        ]
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "SANJAY JOSHI",
-        "email": "sanjay9716148460@gmail.com",
-        "phone": "09716148460",
-        "street": "Pradhan enclave burari north delhi",
-        "city": "Delhi",
-        "state": "Delhi",
-        "pinCode": "123456"
-      },
-      "status": "dispatched"
+      "status": "dispatched",
+      "id": 1
     }
   ]
 }

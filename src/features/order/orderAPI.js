@@ -12,7 +12,7 @@ export function createOrder(order) {
 
 export function updateOrder(order) {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/orders/' + order.id, {
+    const response = await fetch('http://localhost:8080/orders/'+order.id, {
       method: 'PATCH',
       body: JSON.stringify(order),
       headers: { 'content-type': 'application/json' },
@@ -23,11 +23,11 @@ export function updateOrder(order) {
 }
 
 export function fetchAllOrders(sort, pagination) {
-  let queryString = '';
+ let queryString = '';
 
-  for (let key in sort) {
-    queryString += `${key}=${sort[key]}&`;
-  }
+ for (let key in sort) {
+  queryString += `${key}=${sort[key]}&`;
+}
   for (let key in pagination) {
     queryString += `${key}=${pagination[key]}&`;
   }

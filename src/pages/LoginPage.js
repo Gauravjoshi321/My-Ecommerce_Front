@@ -1,9 +1,8 @@
-const { default: Login } = require("../features/auth/components/Login");
-
+import Login from "../features/auth/components/Login";
 function LoginPage() {
-  return (
-    <Login />
-  )
+    return ( <div>
+        <Login></Login>
+    </div>  );
 }
 
 export default LoginPage;
