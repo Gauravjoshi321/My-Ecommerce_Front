@@ -12,6 +12,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Modal from '../../common/Modal';
+import { useAlert } from 'react-alert';
 
 function ProductForm() {
   const { register, handleSubmit, setValue, reset } = useForm();
@@ -22,6 +23,8 @@ function ProductForm() {
   const res = useSelector(selectProductById);
   const selectedProduct = res === null ? null : res[0];
   const [openModal, setOpenModal] = useState(null);
+
+  const alert = useAlert();
 
   useEffect(() => {
     if (params.id) {
@@ -80,9 +83,12 @@ function ProductForm() {
             product.id = params.id;
             product.rating = selectedProduct.rating || 0;
             dispatch(updateProductAsync(product));
+            alert.success('Product Updated');
             reset();
           } else {
             dispatch(createProductAsync(product));
+            alert.success('Product Created');
+            // TODO: these alerts should check if API failed
             reset();
             //TODO:  on product successfully added clear fields and show a message
           }
@@ -442,15 +448,17 @@ function ProductForm() {
         </div>
       </form>
 
-      <Modal
-        title={`Delete ${selectedProduct && selectedProduct.title}`}
-        message="Are you sure you want to delete this Product ?"
-        dangerOption="Delete"
-        cancelOption="Cancel"
-        dangerAction={handleDelete}
-        cancelAction={() => setOpenModal(null)}
-        showModal={openModal}
-      ></Modal>
+      {selectedProduct &&
+        <Modal
+          title={`Delete ${selectedProduct.title}`}
+          message="Are you sure you want to delete this Product ?"
+          dangerOption="Delete"
+          cancelOption="Cancel"
+          dangerAction={handleDelete}
+          cancelAction={() => setOpenModal(null)}
+          showModal={openModal}
+        ></Modal>
+      }
     </>
   );
 }
