@@ -2,28 +2,28 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
-export default function Modal({title,message,dangerOption,cancelOption, dangerAction, cancelAction, showModal }) {
+export default function Modal({ title, message, dangerOption, cancelOption, dangerAction, cancelAction, showModal }) {
   const [open, setOpen] = useState(false);
 
   const cancelButtonRef = useRef(null);
 
-  const handleDanger = ()=>{
+  const handleDanger = () => {
     setOpen(false)
     dangerAction()
   }
 
-  const handleCancel = ()=>{
+  const handleCancel = () => {
     setOpen(false)
     cancelAction()
   }
 
-  useEffect(()=>{
-    if(showModal){
-       setOpen(true)
-    } else{
+  useEffect(() => {
+    if (showModal) {
+      setOpen(true)
+    } else {
       setOpen(false)
     }
-  },[showModal])
+  }, [showModal])
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -74,7 +74,7 @@ export default function Modal({title,message,dangerOption,cancelOption, dangerAc
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                         {message}
+                          {message}
                         </p>
                       </div>
                     </div>

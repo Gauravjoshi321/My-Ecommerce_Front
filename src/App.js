@@ -1,10 +1,9 @@
-import { Counter } from './features/counter/Counter';
 import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 
-import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import CartPage from './pages/CartPage';
 import Checkout from './pages/Checkout';
 import ProductDetailPage from './pages/ProductDetailPage';
@@ -116,15 +115,27 @@ const router = createBrowserRouter([
   },
   {
     path: '/order-success/:id',
-    element: <OrderSuccessPage></OrderSuccessPage>,
+    element: (
+      <Protected>
+        <OrderSuccessPage></OrderSuccessPage>{' '}
+      </Protected>
+    ),
   },
   {
     path: '/orders',
-    element: <UserOrdersPage></UserOrdersPage>,
+    element: (
+      <Protected>
+        <UserOrdersPage></UserOrdersPage>{' '}
+      </Protected>
+    ),
   },
   {
     path: '/profile',
-    element: <UserProfilePage></UserProfilePage>,
+    element: (
+      <Protected>
+        <UserProfilePage></UserProfilePage>{' '}
+      </Protected>
+    ),
   },
   {
     path: '/logout',

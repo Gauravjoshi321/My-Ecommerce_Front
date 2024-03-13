@@ -15,7 +15,6 @@ export default function Signup() {
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
 
   return (
     <>
@@ -42,7 +41,7 @@ export default function Signup() {
                   email: data.email,
                   password: data.password,
                   addresses: [],
-                  role:'user'
+                  role: 'user'
                   //TODO: this role can be directly given on backend
                 })
               );

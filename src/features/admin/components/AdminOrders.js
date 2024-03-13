@@ -24,7 +24,8 @@ function AdminOrders() {
   const [sort, setSort] = useState({});
 
   const handleEdit = (order) => {
-    setEditableOrderId(order.id);
+    if (editableOrderId === -1) setEditableOrderId(order.id);
+    else setEditableOrderId(-1);
   };
   const handleShow = () => {
     console.log('handleShow');
@@ -116,16 +117,15 @@ function AdminOrders() {
               </thead>
               <tbody className="text-gray-600 text-sm font-light">
                 {orders.map((order) => (
-                  <tr className="border-b border-gray-200 hover:bg-gray-100">
-                    <td className="py-3 px-6 text-left whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="mr-2"></div>
-                        <span className="font-medium">{order.id}</span>
-                      </div>
-                    </td>
+                  <tr key={order.id} className="border-b border-gray-200 hover:bg-gray-100">                    <td className="py-3 px-6 text-left whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="mr-2"></div>
+                      <span className="font-medium">{order.id}</span>
+                    </div>
+                  </td>
                     <td className="py-3 px-6 text-left">
-                      {order.items.map((item) => (
-                        <div className="flex items-center">
+                      {order.items.map((item, index) => (
+                        <div key={index} className="flex items-center">
                           <div className="mr-2">
                             <img
                               className="w-6 h-6 rounded-full"
@@ -158,7 +158,7 @@ function AdminOrders() {
                     </td>
                     <td className="py-3 px-6 text-center">
                       {order.id === editableOrderId ? (
-                        <select onChange={(e) => handleUpdate(e, order)}>
+                        <select value={order.status} onChange={(e) => handleUpdate(e, order)}>
                           <option value="pending">Pending</option>
                           <option value="dispatched">Dispatched</option>
                           <option value="delivered">Delivered</option>

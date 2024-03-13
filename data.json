@@ -50,7 +50,8 @@
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      ],
+      "deleted": true
     },
     {
       "id": "4",
@@ -1838,42 +1839,6 @@
         "https://cdn.dummyjson.com/product-images/100/3.jpg",
         "https://cdn.dummyjson.com/product-images/100/thumbnail.jpg"
       ]
-    },
-    {
-      "id": "e5ab",
-      "title": "sdfg",
-      "description": "fdf",
-      "brand": "Apple",
-      "category": "smartphones",
-      "price": 222,
-      "discountPercentage": 22,
-      "stock": 22,
-      "thumbnail": "22",
-      "images": [
-        "22",
-        "22",
-        "22",
-        "22"
-      ],
-      "rating": 0
-    },
-    {
-      "id": "3725",
-      "title": "qq",
-      "description": "q",
-      "brand": "Apple",
-      "category": "sunglasses",
-      "price": 111,
-      "discountPercentage": 1,
-      "stock": 1,
-      "thumbnail": "111",
-      "images": [
-        "1",
-        "1",
-        "1",
-        "111"
-      ],
-      "rating": 0
     }
   ],
   "brands": [
@@ -2484,7 +2449,7 @@
           "pinCode": "110084"
         }
       ],
-      "role": "user"
+      "role": "admin"
     },
     {
       "id": "6331",

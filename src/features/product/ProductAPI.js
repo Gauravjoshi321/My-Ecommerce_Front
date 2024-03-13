@@ -53,6 +53,8 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   // TODO : Server will filter deleted products in case of non-admin
 
   let queryString = '';
+
+  // Filter
   for (let key in filter) {
     const categoryValues = filter[key];
     if (categoryValues.length) {
@@ -60,10 +62,13 @@ export function fetchProductsByFilters(filter, sort, pagination) {
       queryString += `${key}=${lastCategoryValue}&`;
     }
   }
+
+  // Sorting
   for (let key in sort) {
     queryString += `${key}=${sort[key]}&`;
   }
-  console.log(pagination);
+
+  // Pagination 
   for (let key in pagination) {
     queryString += `${key}=${pagination[key]}&`;
   }
@@ -74,8 +79,9 @@ export function fetchProductsByFilters(filter, sort, pagination) {
       'http://localhost:8080/products?' + queryString
     );
     const data = await response.json();
+    console.log(data);
     const totalItems = await response.headers.get('X-Total-Count');
-    resolve({ data: { products: data.data, totalItems: +totalItems } });
+    resolve({ data: { products: data, totalItems: +totalItems } });
   });
 }
 
