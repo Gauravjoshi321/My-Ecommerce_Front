@@ -1,21 +1,21 @@
-export function fetchLoggedInUserOrders(userId) {
+export function fetchLoggedInUserOrders() {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/orders/user/' + userId)
-    const data = await response.json()
-    resolve({ data })
-  })
-}
-
-
-export function fetchLoggedInUser(userId) {
-  return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/users/' + userId)
+    const response = await fetch('http://localhost:8080/orders/own/')
     const data = await response.json()
     resolve({ data })
   }
   );
 }
 
+
+export function fetchLoggedInUser() {
+  return new Promise(async (resolve) => {
+    const response = await fetch('http://localhost:8080/users/own')
+    const data = await response.json()
+    resolve({ data })
+  }
+  );
+}
 export function updateUser(update) {
   return new Promise(async (resolve) => {
     const response = await fetch('http://localhost:8080/users/' + update.id, {
@@ -28,5 +28,3 @@ export function updateUser(update) {
     resolve({ data });
   });
 }
-
-
