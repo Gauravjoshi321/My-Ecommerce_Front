@@ -80,7 +80,7 @@ function Checkout() {
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
-      {currentOrder.paymentMethod === 'cash' && (
+      {currentOrder && currentOrder.paymentMethod === 'cash' && (
         <Navigate
           to={`/order-success/${currentOrder.id}`}
           replace={true}
