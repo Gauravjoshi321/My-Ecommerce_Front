@@ -1837,26 +1837,3 @@ const products = [
 const brands = [...new Set([...products.map(p => p.category)])]
 
 brands.map(c => ({ value: c, label: c.split('-').join(' '), checked: false }))
-
-
-
-/*"@headlessui/react": "^1.7.14",
-    "@heroicons/react": "^2.0.17",
-    "@reduxjs/toolkit": "^1.9.5",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "react": "^18.2.0",
-    "react-alert": "^7.0.3",
-    "react-alert-template-basic": "^1.0.2",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.9",
-    "react-loader-spinner": "^5.3.4",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
-    "tailwindcss": "^3.3.2",
-    "web-vitals": "^2.1.4"
-    */
